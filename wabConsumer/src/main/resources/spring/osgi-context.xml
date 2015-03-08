@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+  <reference id="myService" interface="org.astonbitecode.osgi.serviceProvider.service.MyService"
+    availability="mandatory"/>
+
+  <bean id="consumerService" class="org.astonbitecode.osgi.wabConsumer.service.impl.ConsumerServiceImpl">
+    <property name="myService" ref="myService" />
+  </bean>
+</blueprint>
